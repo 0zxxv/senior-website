@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wessal Edu | Connecting Future Schools in Bahrain</title>
+    <meta name="description" content="The Integrated Intelligent System for Real-Time Monitoring, Safety, and Communication for Bahrain's Educational Vision.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="12" cy="14" r="4" fill="currentColor"/>
+                        <circle cx="28" cy="14" r="4" fill="currentColor"/>
+                        <circle cx="20" cy="28" r="4" fill="currentColor"/>
+                        <path d="M12 14L20 28M28 14L20 28M12 14L28 14" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                </div>
+                <span>Wessal<span class="accent">Edu</span></span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#vision">Vision</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#technology">Technology</a></li>
+                <li><a href="#contact" class="nav-cta">Get Started</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="hero-pattern"></div>
+            <div class="hero-orbs">
+                <div class="orb orb-1"></div>
+                <div class="orb orb-2"></div>
+                <div class="orb orb-3"></div>
+            </div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Future Schools Project - Kingdom of Bahrain
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-line">Wessal Edu</span>
+                    <span class="title-line gradient-text">Connecting Future Schools</span>
+                    <span class="title-line">in Bahrain</span>
+                </h1>
+                <p class="hero-subtitle">
+                    The Integrated Intelligent System for Real-Time Monitoring, Safety, and Communication — Empowering the Kingdom's Educational Vision.
+                </p>
+                <div class="hero-cta">
+                    <a href="#features" class="btn btn-primary">
+                        <span>View Full Features</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                        </svg>
+                    </a>
+                    <a href="#vision" class="btn btn-secondary">
+                        <span>Learn More</span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">Core Pillars</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">Stakeholder Groups</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-number">∞</span>
+                        <span class="stat-label">Possibilities</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="visual-container">
+                    <!-- Central School Icon -->
+                    <div class="visual-center">
+                        <div class="school-icon">
+                            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="10" y="35" width="60" height="40" rx="4" fill="currentColor" fill-opacity="0.1" stroke="currentColor" stroke-width="2"/>
+                                <path d="M40 10L70 35H10L40 10Z" fill="currentColor" fill-opacity="0.1" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                                <rect x="32" y="50" width="16" height="25" rx="2" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="40" cy="25" r="6" fill="currentColor" fill-opacity="0.3" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <!-- Orbiting Elements -->
+                    <div class="orbit orbit-1">
+                        <div class="orbit-item mobile-app">
+                            <div class="orbit-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="5" y="2" width="14" height="20" rx="2"/>
+                                    <line x1="12" y1="18" x2="12" y2="18"/>
+                                </svg>
+                            </div>
+                            <span class="orbit-label">Mobile App</span>
+                        </div>
+                    </div>
+                    
+                    <div class="orbit orbit-2">
+                        <div class="orbit-item bracelet">
+                            <div class="orbit-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="9"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                    <path d="M12 3V6M12 18V21M3 12H6M18 12H21"/>
+                                </svg>
+                            </div>
+                            <span class="orbit-label">Smart Bracelet</span>
+                        </div>
+                    </div>
+                    
+                    <div class="orbit orbit-3">
+                        <div class="orbit-item cloud">
+                            <div class="orbit-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+                                </svg>
+                            </div>
+                            <span class="orbit-label">Cloud Sync</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Connection Lines -->
+                    <svg class="connection-lines" viewBox="0 0 400 400">
+                        <defs>
+                            <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="var(--accent-primary)" stop-opacity="0.5"/>
+                                <stop offset="100%" stop-color="var(--accent-secondary)" stop-opacity="0.5"/>
+                            </linearGradient>
+                        </defs>
+                        <path class="connection-path" d="M200 200 L100 100" stroke="url(#lineGradient)" stroke-width="2" stroke-dasharray="8 4"/>
+                        <path class="connection-path" d="M200 200 L300 100" stroke="url(#lineGradient)" stroke-width="2" stroke-dasharray="8 4"/>
+                        <path class="connection-path" d="M200 200 L200 320" stroke="url(#lineGradient)" stroke-width="2" stroke-dasharray="8 4"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <a href="#vision" class="scroll-indicator">
+                <span>Scroll to explore</span>
+                <div class="scroll-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 5v14M5 12l7 7 7-7"/>
+                    </svg>
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <!-- Vision Section -->
+    <section class="vision" id="vision">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">The Vision</span>
+                <h2 class="section-title">Transforming Education Through <span class="gradient-text">Digital Innovation</span></h2>
+            </div>
+            
+            <div class="vision-grid">
+                <!-- Problem Card -->
+                <div class="vision-card problem-card">
+                    <div class="card-icon problem-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 8v4M12 16h.01"/>
+                        </svg>
+                    </div>
+                    <h3>The Challenge</h3>
+                    <p>Traditional educational systems face critical challenges that limit their effectiveness:</p>
+                    <ul class="challenge-list">
+                        <li>
+                            <span class="list-icon">✗</span>
+                            <span>Reliance on outdated paper-based methods</span>
+                        </li>
+                        <li>
+                            <span class="list-icon">✗</span>
+                            <span>Weak communication between stakeholders</span>
+                        </li>
+                        <li>
+                            <span class="list-icon">✗</span>
+                            <span>Limited parental follow-up on student progress</span>
+                        </li>
+                        <li>
+                            <span class="list-icon">✗</span>
+                            <span>Manual attendance tracking prone to errors</span>
+                        </li>
+                        <li>
+                            <span class="list-icon">✗</span>
+                            <span>Insufficient real-time safety monitoring</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Solution Card -->
+                <div class="vision-card solution-card">
+                    <div class="card-icon solution-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                    </div>
+                    <h3>The Solution: Wessal Edu</h3>
+                    <p>An integrated intelligent system combining cutting-edge technology for comprehensive educational management:</p>
+                    <ul class="solution-list">
+                        <li>
+                            <span class="list-icon">✓</span>
+                            <span>Smart Bracelet with NFC/AirTag technology</span>
+                        </li>
+                        <li>
+                            <span class="list-icon">✓</span>
+                            <span>Unified Mobile Application for all stakeholders</span>
+                        </li>
+                        <li>
+                            <span class="list-icon">✓</span>
+                            <span>AI-powered analytics and monitoring</span>
+                        </li>
+                        <li>
+                            <span class="list-icon">✓</span>
+                            <span>Real-time communication channels</span>
+                        </li>
+                        <li>
+                            <span class="list-icon">✓</span>
+                            <span>Cloud-based data synchronization</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Bahrain Context -->
+            <div class="bahrain-context">
+                <div class="context-content">
+                    <div class="context-badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        </svg>
+                        King Hamad bin Isa's Future Schools Project
+                    </div>
+                    <h3>Aligned with Bahrain's Educational Vision</h3>
+                    <p>Wessal Edu is designed to support and accelerate the Kingdom of Bahrain's Future Schools initiative, bringing world-class digital education infrastructure to every school in the nation.</p>
+                </div>
+                <div class="context-visual">
+                    <div class="bahrain-map">
+                        <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="100" cy="100" r="80" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4" opacity="0.3"/>
+                            <circle cx="100" cy="100" r="60" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4" opacity="0.4"/>
+                            <circle cx="100" cy="100" r="40" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4" opacity="0.5"/>
+                            <circle cx="100" cy="100" r="20" fill="currentColor" opacity="0.2"/>
+                            <circle cx="100" cy="100" r="8" fill="currentColor"/>
+                            <!-- Connected nodes representing schools -->
+                            <circle cx="60" cy="70" r="5" fill="currentColor" opacity="0.7"/>
+                            <circle cx="140" cy="80" r="5" fill="currentColor" opacity="0.7"/>
+                            <circle cx="80" cy="140" r="5" fill="currentColor" opacity="0.7"/>
+                            <circle cx="130" cy="130" r="5" fill="currentColor" opacity="0.7"/>
+                            <line x1="100" y1="100" x2="60" y2="70" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+                            <line x1="100" y1="100" x2="140" y2="80" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+                            <line x1="100" y1="100" x2="80" y2="140" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+                            <line x1="100" y1="100" x2="130" y2="130" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section (5 Pillars) -->
+    <section class="features" id="features">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Core Features</span>
+                <h2 class="section-title">The <span class="gradient-text">5 Pillars</span> of Wessal Edu</h2>
+                <p class="section-desc">A comprehensive ecosystem designed to revolutionize educational management</p>
+            </div>
+            
+            <div class="pillars-grid">
+                <!-- Pillar 1: Automated Attendance -->
+                <div class="pillar-card" data-pillar="1">
+                    <div class="pillar-number">01</div>
+                    <div class="pillar-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="24" cy="24" r="12" stroke="currentColor" stroke-width="2" stroke-dasharray="4 2"/>
+                            <circle cx="24" cy="24" r="4" fill="currentColor"/>
+                            <path d="M24 4V8M24 40V44M4 24H8M40 24H44" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Automated Attendance & Safety</h3>
+                    <p class="pillar-subtitle">IoT-Powered Tracking</p>
+                    <p class="pillar-desc">Smart Bracelet with NFC/AirTag technology and dedicated reader devices for seamless, hands-free attendance tracking.</p>
+                    <ul class="pillar-features">
+                        <li>Bus boarding/exit detection</li>
+                        <li>Classroom entry automation</li>
+                        <li>Real-time location monitoring</li>
+                        <li>Emergency safety alerts</li>
+                    </ul>
+                    <div class="pillar-visual">
+                        <div class="bracelet-mockup">
+                            <div class="bracelet-band"></div>
+                            <div class="bracelet-screen">
+                                <span class="status-dot"></span>
+                                <span>Active</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pillar 2: Real-Time Communication -->
+                <div class="pillar-card" data-pillar="2">
+                    <div class="pillar-number">02</div>
+                    <div class="pillar-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 12h32v24H8z" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <path d="M8 12l16 12 16-12" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="38" cy="10" r="6" fill="currentColor"/>
+                            <text x="38" y="13" text-anchor="middle" fill="white" font-size="8" font-weight="bold">3</text>
+                        </svg>
+                    </div>
+                    <h3>Real-Time Communication</h3>
+                    <p class="pillar-subtitle">Unified Mobile Platform</p>
+                    <p class="pillar-desc">A single mobile application connecting parents, teachers, and administrators with instant messaging and notifications.</p>
+                    <ul class="pillar-features">
+                        <li>Direct chat functionality</li>
+                        <li>Instant announcements</li>
+                        <li>Push notifications</li>
+                        <li>Multi-language support</li>
+                    </ul>
+                    <div class="pillar-visual">
+                        <div class="notification-stack">
+                            <div class="notification">
+                                <span class="notif-icon">🚌</span>
+                                <span class="notif-text">Child has boarded the bus</span>
+                            </div>
+                            <div class="notification">
+                                <span class="notif-icon">📚</span>
+                                <span class="notif-text">New homework assigned</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pillar 3: Performance Monitoring -->
+                <div class="pillar-card" data-pillar="3">
+                    <div class="pillar-number">03</div>
+                    <div class="pillar-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="6" y="6" width="36" height="36" rx="4" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 30l8-8 6 6 10-12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="12" cy="30" r="2" fill="currentColor"/>
+                            <circle cx="20" cy="22" r="2" fill="currentColor"/>
+                            <circle cx="26" cy="28" r="2" fill="currentColor"/>
+                            <circle cx="36" cy="16" r="2" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>Performance & Behavior Monitoring</h3>
+                    <p class="pillar-subtitle">AI-Driven Analytics</p>
+                    <p class="pillar-desc">Personalized dashboards with intelligent data analysis for academic tracking and early detection of behavioral patterns.</p>
+                    <ul class="pillar-features">
+                        <li>Instant grade updates</li>
+                        <li>Homework management</li>
+                        <li>Behavioral pattern analysis</li>
+                        <li>Mental health indicators</li>
+                    </ul>
+                    <div class="pillar-visual">
+                        <div class="chart-mockup">
+                            <div class="chart-bar" style="--height: 60%"></div>
+                            <div class="chart-bar" style="--height: 80%"></div>
+                            <div class="chart-bar" style="--height: 45%"></div>
+                            <div class="chart-bar" style="--height: 90%"></div>
+                            <div class="chart-bar" style="--height: 70%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pillar 4: Advanced Security -->
+                <div class="pillar-card" data-pillar="4">
+                    <div class="pillar-number">04</div>
+                    <div class="pillar-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 4L6 12v12c0 11 8 18 18 20 10-2 18-9 18-20V12L24 4z" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="24" cy="22" r="6" stroke="currentColor" stroke-width="2"/>
+                            <path d="M20 22l3 3 5-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Advanced Security</h3>
+                    <p class="pillar-subtitle">AI Camera System</p>
+                    <p class="pillar-desc">Facial recognition technology for campus security, detecting unauthorized individuals and providing automated classroom attendance.</p>
+                    <ul class="pillar-features">
+                        <li>Facial recognition access</li>
+                        <li>Intruder detection alerts</li>
+                        <li>Automated attendance backup</li>
+                        <li>Real-time monitoring</li>
+                    </ul>
+                    <div class="pillar-visual">
+                        <div class="security-scan">
+                            <div class="scan-frame">
+                                <div class="scan-corner top-left"></div>
+                                <div class="scan-corner top-right"></div>
+                                <div class="scan-corner bottom-left"></div>
+                                <div class="scan-corner bottom-right"></div>
+                                <div class="scan-line"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pillar 5: Student Engagement -->
+                <div class="pillar-card" data-pillar="5">
+                    <div class="pillar-number">05</div>
+                    <div class="pillar-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="8" y="8" width="32" height="32" rx="4" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="18" cy="20" r="4" fill="currentColor"/>
+                            <circle cx="30" cy="20" r="4" fill="currentColor"/>
+                            <path d="M16 30c0 0 4 4 8 4s8-4 8-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Student Engagement</h3>
+                    <p class="pillar-subtitle">Interactive Learning</p>
+                    <p class="pillar-desc">Educational games and interactive content integrated into the platform to boost learning outcomes and digital literacy.</p>
+                    <ul class="pillar-features">
+                        <li>Educational mini-games</li>
+                        <li>Gamified achievements</li>
+                        <li>Interactive quizzes</li>
+                        <li>Digital literacy modules</li>
+                    </ul>
+                    <div class="pillar-visual">
+                        <div class="game-icons">
+                            <span class="game-icon">🎮</span>
+                            <span class="game-icon">🏆</span>
+                            <span class="game-icon">⭐</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits" id="benefits">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Who Benefits</span>
+                <h2 class="section-title">Empowering <span class="gradient-text">Every Stakeholder</span></h2>
+                <p class="section-desc">Tailored experiences designed for each user's unique needs</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <!-- Parents -->
+                <div class="benefit-card parents">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="24" cy="14" r="8" stroke="currentColor" stroke-width="2"/>
+                            <path d="M8 42c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="36" cy="36" r="8" fill="currentColor" opacity="0.2"/>
+                            <path d="M33 36l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Parents</h3>
+                    <p class="benefit-tagline">Peace of Mind, Anytime</p>
+                    <ul class="benefit-list">
+                        <li>
+                            <svg viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Instant safety alerts when child boards/exits bus</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Real-time academic progress tracking</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Direct communication with teachers and admin</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Homework and assignment notifications</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Teachers -->
+                <div class="benefit-card teachers">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="6" y="10" width="36" height="28" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M6 18h36" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="16" cy="28" r="4" stroke="currentColor" stroke-width="2"/>
+                            <path d="M24 26h12M24 32h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Teachers</h3>
+                    <p class="benefit-tagline">Focus on What Matters</p>
+                    <ul class="benefit-list">
+                        <li>
+                            <svg viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Automated attendance saves valuable time</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Streamlined grade entry and reporting</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Efficient parent communication tools</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>More time dedicated to teaching</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Administrators -->
+                <div class="benefit-card admins">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 4L6 12v12c0 11 8 18 18 20 10-2 18-9 18-20V12L24 4z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M16 24h16M24 16v16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Administrators & MoE</h3>
+                    <p class="benefit-tagline">Data-Driven Excellence</p>
+                    <ul class="benefit-list">
+                        <li>
+                            <svg viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Comprehensive analytics dashboard</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Improved school operational efficiency</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Full transparency and accountability</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Simplified compliance reporting</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section class="technology" id="technology">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Technology</span>
+                <h2 class="section-title">Built on <span class="gradient-text">Cutting-Edge</span> Infrastructure</h2>
+                <p class="section-desc">Enterprise-grade technology stack ensuring reliability, security, and scalability</p>
+            </div>
+            
+            <div class="tech-architecture">
+                <div class="tech-stack">
+                    <div class="tech-category">
+                        <h4>IoT Layer</h4>
+                        <div class="tech-items">
+                            <div class="tech-item">
+                                <span class="tech-icon">📡</span>
+                                <span>NFC Technology</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-icon">⌚</span>
+                                <span>Smart Bracelet</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-icon">📱</span>
+                                <span>Reader Devices</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-category">
+                        <h4>AI & Analytics</h4>
+                        <div class="tech-items">
+                            <div class="tech-item">
+                                <span class="tech-icon">🤖</span>
+                                <span>Machine Learning</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-icon">👁️</span>
+                                <span>Facial Recognition</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-icon">📊</span>
+                                <span>Data Analysis</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-category">
+                        <h4>Cloud Infrastructure</h4>
+                        <div class="tech-items">
+                            <div class="tech-item">
+                                <span class="tech-icon">🔥</span>
+                                <span>Firebase</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-icon">☁️</span>
+                                <span>Cloud Functions</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-icon">🔒</span>
+                                <span>Secure Backend</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="system-components">
+                    <h4>System Components</h4>
+                    <div class="components-showcase">
+                        <!-- Mobile App Mockup -->
+                        <div class="component-card">
+                            <div class="phone-mockup">
+                                <div class="phone-frame">
+                                    <div class="phone-notch"></div>
+                                    <div class="phone-screen">
+                                        <div class="app-header">
+                                            <span class="app-logo">W</span>
+                                            <span>Wessal Edu</span>
+                                        </div>
+                                        <div class="app-content">
+                                            <div class="app-card">
+                                                <span class="card-icon">👤</span>
+                                                <div class="card-info">
+                                                    <span class="card-title">Ahmed Ali</span>
+                                                    <span class="card-subtitle">Grade 5 - Section A</span>
+                                                </div>
+                                            </div>
+                                            <div class="app-stats">
+                                                <div class="stat-box">
+                                                    <span class="stat-value">98%</span>
+                                                    <span class="stat-label">Attendance</span>
+                                                </div>
+                                                <div class="stat-box">
+                                                    <span class="stat-value">A</span>
+                                                    <span class="stat-label">Grade</span>
+                                                </div>
+                                            </div>
+                                            <div class="app-nav">
+                                                <span>🏠</span>
+                                                <span>📚</span>
+                                                <span>💬</span>
+                                                <span>⚙️</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="component-label">Mobile Application<br><small>iOS & Android</small></p>
+                        </div>
+                        
+                        <!-- Smart Bracelet Mockup -->
+                        <div class="component-card">
+                            <div class="bracelet-mockup-large">
+                                <div class="bracelet-frame">
+                                    <div class="bracelet-strap left"></div>
+                                    <div class="bracelet-body">
+                                        <div class="bracelet-display">
+                                            <span class="bracelet-time">08:15</span>
+                                            <span class="bracelet-status">✓ Present</span>
+                                        </div>
+                                    </div>
+                                    <div class="bracelet-strap right"></div>
+                                </div>
+                            </div>
+                            <p class="component-label">Smart Bracelet<br><small>NFC-Enabled</small></p>
+                        </div>
+                        
+                        <!-- NFC Reader Mockup -->
+                        <div class="component-card">
+                            <div class="reader-mockup">
+                                <div class="reader-frame">
+                                    <div class="reader-screen">
+                                        <div class="reader-wave"></div>
+                                        <span class="reader-text">TAP TO SCAN</span>
+                                    </div>
+                                    <div class="reader-led"></div>
+                                </div>
+                            </div>
+                            <p class="component-label">NFC Reader<br><small>Classroom & Bus</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Architecture Diagram Hint -->
+            <div class="architecture-note">
+                <div class="note-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M12 16v-4M12 8h.01"/>
+                    </svg>
+                </div>
+                <p>The system architecture follows a robust, scalable design pattern with clear separation between IoT devices, mobile clients, and cloud services — ensuring reliability and maintainability.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-container">
+            <div class="contact-wrapper">
+                <div class="contact-content">
+                    <span class="section-tag">Get Started</span>
+                    <h2 class="section-title">Ready to Transform <span class="gradient-text">Your School?</span></h2>
+                    <p>Join the future of education in Bahrain. Request a demo or get more information about implementing Wessal Edu in your institution.</p>
+                    
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="info-label">Email</span>
+                                <a href="mailto:info@wessaledu.bh">info@wessaledu.bh</a>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="info-label">Phone</span>
+                                <a href="tel:+97317000000">+973 1700 0000</a>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="info-label">Location</span>
+                                <span>Manama, Kingdom of Bahrain</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="organization">Organization</label>
+                            <input type="text" id="organization" name="organization" placeholder="School or Ministry">
+                        </div>
+                        <div class="form-group">
+                            <label for="role">Your Role</label>
+                            <select id="role" name="role" required>
+                                <option value="" disabled selected>Select your role</option>
+                                <option value="moe">Ministry of Education Official</option>
+                                <option value="principal">School Principal</option>
+                                <option value="admin">School Administrator</option>
+                                <option value="teacher">Teacher</option>
+                                <option value="parent">Parent</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Tell us about your needs..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span>Request Demo</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+                        <div class="logo-icon">
+                            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="12" cy="14" r="4" fill="currentColor"/>
+                                <circle cx="28" cy="14" r="4" fill="currentColor"/>
+                                <circle cx="20" cy="28" r="4" fill="currentColor"/>
+                                <path d="M12 14L20 28M28 14L20 28M12 14L28 14" stroke="currentColor" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                        <span>Wessal<span class="accent">Edu</span></span>
+                    </a>
+                    <p>Connecting Future Schools in Bahrain through intelligent technology and seamless communication.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#vision">Our Vision</a></li>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#benefits">Benefits</a></li>
+                            <li><a href="#technology">Technology</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Stakeholders</h4>
+                        <ul>
+                            <li><a href="#benefits">For Parents</a></li>
+                            <li><a href="#benefits">For Teachers</a></li>
+                            <li><a href="#benefits">For Administrators</a></li>
+                            <li><a href="#benefits">For Ministry</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><a href="mailto:info@wessaledu.bh">info@wessaledu.bh</a></li>
+                            <li><a href="tel:+97317000000">+973 1700 0000</a></li>
+                            <li>Manama, Bahrain</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Wessal Edu. All rights reserved.</p>
+                <p class="footer-note">A Senior Project for the Future Schools Initiative</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
+
