@@ -8,6 +8,7 @@
  * - Scroll animations (fade-in effects)
  * - Form submission handling
  * - Smooth scrolling
+ * - Phone gallery/slideshow functionality
  */
 
 // ===================================
@@ -17,6 +18,77 @@ const navbar = document.getElementById('navbar');
 const navToggle = document.getElementById('navToggle');
 const navMenu = document.getElementById('navMenu');
 const contactForm = document.getElementById('contactForm');
+
+// Gallery elements
+const fullscreenGallery = document.getElementById('fullscreenGallery');
+const galleryClose = document.getElementById('galleryClose');
+const galleryPrev = document.getElementById('galleryPrev');
+const galleryNext = document.getElementById('galleryNext');
+const galleryScreen = document.getElementById('galleryScreen');
+const galleryUserType = document.getElementById('galleryUserType');
+const galleryScreenName = document.getElementById('galleryScreenName');
+const galleryCounter = document.getElementById('galleryCounter');
+
+// ===================================
+// App Screenshots Configuration
+// ===================================
+// Configure your screenshots here. Add your actual screenshot paths.
+// The structure is: userType -> array of { name, image } objects
+const appScreenshots = {
+    student: [
+        { name: 'Dashboard', image: 'screenshots/student/dashboard.png' },
+        { name: 'Schedule', image: 'screenshots/student/schedule.png' },
+        { name: 'Grades', image: 'screenshots/student/grades.png' },
+        { name: 'Homework', image: 'screenshots/student/homework.png' },
+        { name: 'Games', image: 'screenshots/student/games.png' },
+        // Add more student screens as needed
+    ],
+    parent: [
+        { name: 'Dashboard', image: 'screenshots/parent/dashboard.png' },
+        { name: 'Child Tracking', image: 'screenshots/parent/tracking.png' },
+        { name: 'Messages', image: 'screenshots/parent/messages.png' },
+        { name: 'Reports', image: 'screenshots/parent/reports.png' },
+        { name: 'Settings', image: 'screenshots/parent/settings.png' },
+        // Add more parent screens as needed
+    ],
+    teacher: [
+        { name: 'Dashboard', image: 'screenshots/teacher/dashboard.png' },
+        { name: 'Attendance', image: 'screenshots/teacher/attendance.png' },
+        { name: 'Grades Entry', image: 'screenshots/teacher/grades.png' },
+        { name: 'Class List', image: 'screenshots/teacher/classlist.png' },
+        { name: 'Announcements', image: 'screenshots/teacher/announcements.png' },
+        // Add more teacher screens as needed
+    ],
+    admin: [
+        { name: 'Dashboard', image: 'screenshots/admin/dashboard.png' },
+        { name: 'Analytics', image: 'screenshots/admin/analytics.png' },
+        { name: 'User Management', image: 'screenshots/admin/users.png' },
+        { name: 'Reports', image: 'screenshots/admin/reports.png' },
+        { name: 'Settings', image: 'screenshots/admin/settings.png' },
+        // Add more admin screens as needed
+    ],
+    driver: [
+        { name: 'Dashboard', image: 'screenshots/driver/dashboard.png' },
+        { name: 'Route Map', image: 'screenshots/driver/route.png' },
+        { name: 'Student List', image: 'screenshots/driver/students.png' },
+        { name: 'Scan Students', image: 'screenshots/driver/scan.png' },
+        { name: 'Notifications', image: 'screenshots/driver/notifications.png' },
+        // Add more driver screens as needed
+    ]
+};
+
+// User type display names
+const userTypeNames = {
+    student: 'Student',
+    parent: 'Parent',
+    teacher: 'Teacher',
+    admin: 'Administrator',
+    driver: 'Bus Driver'
+};
+
+// Gallery state
+let currentUserType = null;
+let currentScreenIndex = 0;
 
 // ===================================
 // Navigation Scroll Behavior
@@ -89,7 +161,7 @@ document.addEventListener('click', (e) => {
 function initScrollAnimations() {
     // Elements to animate
     const animatedElements = document.querySelectorAll(
-        '.vision-card, .pillar-card, .benefit-card, .tech-category, .component-card, .section-header'
+        '.vision-card, .pillar-card, .benefit-card, .tech-category, .phone-showcase-item, .section-header, .team-card'
     );
     
     // Add fade-in class to elements
@@ -148,6 +220,169 @@ function initSmoothScroll() {
             }
         });
     });
+}
+
+// ===================================
+// Phone Gallery Functions
+// ===================================
+function initPhoneGallery() {
+    // Add click handlers to phone showcase items
+    const phoneItems = document.querySelectorAll('.phone-showcase-item');
+    
+    phoneItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const userType = item.dataset.user;
+            openGallery(userType);
+        });
+    });
+    
+    // Close button
+    if (galleryClose) {
+        galleryClose.addEventListener('click', closeGallery);
+    }
+    
+    // Previous button
+    if (galleryPrev) {
+        galleryPrev.addEventListener('click', () => {
+            navigateGallery(-1);
+        });
+    }
+    
+    // Next button
+    if (galleryNext) {
+        galleryNext.addEventListener('click', () => {
+            navigateGallery(1);
+        });
+    }
+    
+    // Close on background click
+    if (fullscreenGallery) {
+        fullscreenGallery.addEventListener('click', (e) => {
+            if (e.target === fullscreenGallery) {
+                closeGallery();
+            }
+        });
+    }
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (!fullscreenGallery || !fullscreenGallery.classList.contains('active')) return;
+        
+        switch(e.key) {
+            case 'Escape':
+                closeGallery();
+                break;
+            case 'ArrowLeft':
+                navigateGallery(-1);
+                break;
+            case 'ArrowRight':
+                navigateGallery(1);
+                break;
+        }
+    });
+}
+
+function openGallery(userType) {
+    if (!appScreenshots[userType] || appScreenshots[userType].length === 0) {
+        console.log(`No screenshots configured for ${userType}`);
+        // Still open the gallery with a placeholder message
+    }
+    
+    currentUserType = userType;
+    currentScreenIndex = 0;
+    
+    updateGalleryDisplay();
+    
+    fullscreenGallery.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeGallery() {
+    fullscreenGallery.classList.remove('active');
+    document.body.style.overflow = '';
+    currentUserType = null;
+    currentScreenIndex = 0;
+}
+
+function navigateGallery(direction) {
+    if (!currentUserType) return;
+    
+    const screenshots = appScreenshots[currentUserType];
+    if (!screenshots || screenshots.length === 0) return;
+    
+    currentScreenIndex += direction;
+    
+    // Loop around
+    if (currentScreenIndex < 0) {
+        currentScreenIndex = screenshots.length - 1;
+    } else if (currentScreenIndex >= screenshots.length) {
+        currentScreenIndex = 0;
+    }
+    
+    updateGalleryDisplay();
+}
+
+function updateGalleryDisplay() {
+    if (!currentUserType) return;
+    
+    const screenshots = appScreenshots[currentUserType];
+    const userTypeName = userTypeNames[currentUserType] || currentUserType;
+    
+    // Update user type display
+    if (galleryUserType) {
+        galleryUserType.textContent = userTypeName;
+    }
+    
+    if (!screenshots || screenshots.length === 0) {
+        // Show placeholder for no screenshots
+        if (galleryScreen) {
+            galleryScreen.innerHTML = `
+                <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; background: linear-gradient(135deg, #1d2599, #2630b3); color: white; padding: 20px; text-align: center;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width: 60px; height: 60px; margin-bottom: 16px; opacity: 0.7;">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                        <circle cx="8.5" cy="8.5" r="1.5"/>
+                        <polyline points="21 15 16 10 5 21"/>
+                    </svg>
+                    <p style="font-size: 14px; opacity: 0.8;">Add your ${userTypeName} screenshots to:<br><code style="background: rgba(255,255,255,0.2); padding: 4px 8px; border-radius: 4px; margin-top: 8px; display: inline-block;">screenshots/${currentUserType}/</code></p>
+                </div>
+            `;
+        }
+        if (galleryScreenName) {
+            galleryScreenName.textContent = 'No screenshots yet';
+        }
+        if (galleryCounter) {
+            galleryCounter.textContent = '0 / 0';
+        }
+        return;
+    }
+    
+    const currentScreen = screenshots[currentScreenIndex];
+    
+    // Update screen display
+    if (galleryScreen) {
+        galleryScreen.innerHTML = `
+            <img src="${currentScreen.image}" alt="${currentScreen.name}" 
+                 onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\\'display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; background: linear-gradient(135deg, #1d2599, #2630b3); color: white; padding: 20px; text-align: center;\\'><svg viewBox=\\'0 0 24 24\\' fill=\\'none\\' stroke=\\'currentColor\\' stroke-width=\\'1.5\\' style=\\'width: 60px; height: 60px; margin-bottom: 16px; opacity: 0.7;\\'><rect x=\\'3\\' y=\\'3\\' width=\\'18\\' height=\\'18\\' rx=\\'2\\' ry=\\'2\\'/><circle cx=\\'8.5\\' cy=\\'8.5\\' r=\\'1.5\\'/><polyline points=\\'21 15 16 10 5 21\\'/></svg><p style=\\'font-size: 14px; opacity: 0.8;\\'>${currentScreen.name}<br><small>Image not found</small></p></div>';">
+        `;
+    }
+    
+    // Update screen name
+    if (galleryScreenName) {
+        galleryScreenName.textContent = currentScreen.name;
+    }
+    
+    // Update counter
+    if (galleryCounter) {
+        galleryCounter.textContent = `${currentScreenIndex + 1} / ${screenshots.length}`;
+    }
+    
+    // Update button states
+    updateGalleryButtons();
+}
+
+function updateGalleryButtons() {
+    // Buttons are always enabled since we loop around
+    // But you could disable them at edges if preferred
 }
 
 // ===================================
@@ -366,6 +601,33 @@ function initPillarHoverEffects() {
 }
 
 // ===================================
+// Team Card Hover Effects
+// ===================================
+function initTeamCardEffects() {
+    const teamCards = document.querySelectorAll('.team-card');
+    
+    teamCards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = (y - centerY) / 20;
+            const rotateY = (centerX - x) / 20;
+            
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-15px) scale(1.02)`;
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = '';
+        });
+    });
+}
+
+// ===================================
 // Stats Counter Animation
 // ===================================
 function animateStats() {
@@ -471,6 +733,40 @@ function initParallax() {
 }
 
 // ===================================
+// CV Download Handler
+// ===================================
+function initCVDownloads() {
+    const cvButtons = document.querySelectorAll('.cv-download');
+    
+    cvButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            const member = button.dataset.member;
+            
+            // Update these paths to your actual CV file locations
+            const cvPaths = {
+                zahra: 'cv/zahra-cv.pdf',
+                hanan: 'cv/hanan-cv.pdf',
+                fatima: 'cv/fatima-cv.pdf',
+                ahmed: 'cv/ahmed-cv.pdf'
+            };
+            
+            if (cvPaths[member]) {
+                // Create a temporary link and trigger download
+                const link = document.createElement('a');
+                link.href = cvPaths[member];
+                link.download = `${member}-cv.pdf`;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            } else {
+                showNotification('CV download not available yet.', 'info');
+            }
+        });
+    });
+}
+
+// ===================================
 // Initialize Everything
 // ===================================
 document.addEventListener('DOMContentLoaded', () => {
@@ -479,6 +775,9 @@ document.addEventListener('DOMContentLoaded', () => {
     initSmoothScroll();
     initContactForm();
     initPillarHoverEffects();
+    initTeamCardEffects();
+    initPhoneGallery();
+    initCVDownloads();
     animateStats();
     initKeyboardSupport();
     initParallax();
@@ -488,6 +787,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     console.log('🎓 Wessal Edu website initialized successfully!');
     console.log('📚 Future Schools Project - Kingdom of Bahrain');
+    console.log('👥 Team: Zahra, Hanan, Fatima, Ahmed');
 });
 
 // ===================================
@@ -505,6 +805,38 @@ window.addEventListener('resize', () => {
 });
 
 // ===================================
+// Touch Swipe Support for Gallery
+// ===================================
+let touchStartX = 0;
+let touchEndX = 0;
+
+if (fullscreenGallery) {
+    fullscreenGallery.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, false);
+    
+    fullscreenGallery.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    }, false);
+}
+
+function handleSwipe() {
+    const swipeThreshold = 50;
+    const diff = touchStartX - touchEndX;
+    
+    if (Math.abs(diff) > swipeThreshold) {
+        if (diff > 0) {
+            // Swipe left - next
+            navigateGallery(1);
+        } else {
+            // Swipe right - previous
+            navigateGallery(-1);
+        }
+    }
+}
+
+// ===================================
 // Service Worker Registration (Optional - for PWA)
 // ===================================
 if ('serviceWorker' in navigator) {
@@ -515,4 +847,3 @@ if ('serviceWorker' in navigator) {
         //     .catch(err => console.log('Service Worker registration failed:', err));
     });
 }
-

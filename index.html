@@ -23,15 +23,8 @@
         <div class="nav-container">
             <a href="#" class="nav-logo">
                 <div class="logo-icon">
-                    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
-                        <circle cx="12" cy="14" r="4" fill="currentColor"/>
-                        <circle cx="28" cy="14" r="4" fill="currentColor"/>
-                        <circle cx="20" cy="28" r="4" fill="currentColor"/>
-                        <path d="M12 14L20 28M28 14L20 28M12 14L28 14" stroke="currentColor" stroke-width="1.5"/>
-                    </svg>
+                    <img src="logo.png" alt="Wessal Edu Logo">
                 </div>
-                <span>Wessal<span class="accent">Edu</span></span>
             </a>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
                 <span></span>
@@ -39,16 +32,16 @@
                 <span></span>
             </button>
             <ul class="nav-menu" id="navMenu">
+                <li><a href="#team">Team</a></li>
                 <li><a href="#vision">Vision</a></li>
                 <li><a href="#features">Features</a></li>
-                <li><a href="#benefits">Benefits</a></li>
-                <li><a href="#technology">Technology</a></li>
+                <li><a href="#technology">App Preview</a></li>
                 <li><a href="#contact" class="nav-cta">Get Started</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section - Team -->
     <header class="hero" id="hero">
         <div class="hero-bg">
             <div class="hero-gradient"></div>
@@ -61,111 +54,135 @@
         </div>
         <div class="hero-container">
             <div class="hero-content">
-                <div class="hero-badge">
-                    <span class="badge-dot"></span>
-                    Future Schools Project - Kingdom of Bahrain
-                </div>
                 <h1 class="hero-title">
-                    <span class="title-line">Wessal Edu</span>
+                    <span class="title-line hero-logo-line">
+                        <img src="logo.png" alt="Wessal Edu" class="hero-logo">
+                    </span>
                     <span class="title-line gradient-text">Connecting Future Schools</span>
                     <span class="title-line">in Bahrain</span>
                 </h1>
                 <p class="hero-subtitle">
                     The Integrated Intelligent System for Real-Time Monitoring, Safety, and Communication — Empowering the Kingdom's Educational Vision.
                 </p>
-                <div class="hero-cta">
-                    <a href="#features" class="btn btn-primary">
-                        <span>View Full Features</span>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
-                        </svg>
-                    </a>
-                    <a href="#vision" class="btn btn-secondary">
-                        <span>Learn More</span>
-                    </a>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <span class="stat-number">5</span>
-                        <span class="stat-label">Core Pillars</span>
-                    </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat">
-                        <span class="stat-number">3</span>
-                        <span class="stat-label">Stakeholder Groups</span>
-                    </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat">
-                        <span class="stat-number">∞</span>
-                        <span class="stat-label">Possibilities</span>
-                    </div>
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Future Schools Project - Kingdom of Bahrain
                 </div>
             </div>
-            <div class="hero-visual">
-                <div class="visual-container">
-                    <!-- Central School Icon -->
-                    <div class="visual-center">
-                        <div class="school-icon">
-                            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="10" y="35" width="60" height="40" rx="4" fill="currentColor" fill-opacity="0.1" stroke="currentColor" stroke-width="2"/>
-                                <path d="M40 10L70 35H10L40 10Z" fill="currentColor" fill-opacity="0.1" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                                <rect x="32" y="50" width="16" height="25" rx="2" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-width="2"/>
-                                <circle cx="40" cy="25" r="6" fill="currentColor" fill-opacity="0.3" stroke="currentColor" stroke-width="2"/>
-                            </svg>
+            
+            <!-- Team Section -->
+            <section class="team-section" id="team">
+                <h2 class="team-section-title">Meet Our Team</h2>
+                <div class="team-grid">
+                    <!-- Team Member 1 - Zahra -->
+                    <div class="team-card">
+                        <div class="photo-placeholder">
+                            <img src="photos/zahra.png" alt="Zahra Ali Merza">
                         </div>
-                    </div>
-                    
-                    <!-- Orbiting Elements -->
-                    <div class="orbit orbit-1">
-                        <div class="orbit-item mobile-app">
-                            <div class="orbit-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <rect x="5" y="2" width="14" height="20" rx="2"/>
-                                    <line x1="12" y1="18" x2="12" y2="18"/>
-                                </svg>
+                        <div class="member-info">
+                            <h3 class="member-name">Zahra Ali Merza</h3>
+                            <span class="member-id">202105127</span>
+                            <p class="member-role">Software Engineer</p>
+                            <div class="member-links">
+                                <a href="mailto:202105127@stu.uob.edu.bh" title="Email">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                        <polyline points="22,6 12,13 2,6"/>
+                                    </svg>
+                                </a>
+                                <a href="#" title="Download CV" class="cv-download" data-member="zahra">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                        <polyline points="7 10 12 15 17 10"/>
+                                        <line x1="12" y1="15" x2="12" y2="3"/>
+                                    </svg>
+                                </a>
                             </div>
-                            <span class="orbit-label">Mobile App</span>
                         </div>
                     </div>
                     
-                    <div class="orbit orbit-2">
-                        <div class="orbit-item bracelet">
-                            <div class="orbit-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="12" r="9"/>
-                                    <circle cx="12" cy="12" r="3"/>
-                                    <path d="M12 3V6M12 18V21M3 12H6M18 12H21"/>
-                                </svg>
+                    <!-- Team Member 2 - Hanan -->
+                    <div class="team-card">
+                        <div class="photo-placeholder">
+                            <img src="photos/hanan.png" alt="Hanan Nabeel Abdulla">
+                        </div>
+                        <div class="member-info">
+                            <h3 class="member-name">Hanan Nabeel Abdulla</h3>
+                            <span class="member-id">202106695</span>
+                            <p class="member-role cybersecurity">Cybersecurity</p>
+                            <div class="member-links">
+                                <a href="mailto:202106695@stu.uob.edu.bh" title="Email">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                        <polyline points="22,6 12,13 2,6"/>
+                                    </svg>
+                                </a>
+                                <a href="#" title="Download CV" class="cv-download" data-member="hanan">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                        <polyline points="7 10 12 15 17 10"/>
+                                        <line x1="12" y1="15" x2="12" y2="3"/>
+                                    </svg>
+                                </a>
                             </div>
-                            <span class="orbit-label">Smart Bracelet</span>
                         </div>
                     </div>
                     
-                    <div class="orbit orbit-3">
-                        <div class="orbit-item cloud">
-                            <div class="orbit-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
-                                </svg>
+                    <!-- Team Member 3 - Fatima -->
+                    <div class="team-card">
+                        <div class="photo-placeholder">
+                            <img src="photos/fatima.jpg" alt="Fatima Jaffar Matrook">
+                        </div>
+                        <div class="member-info">
+                            <h3 class="member-name">Fatima Jaffar Matrook</h3>
+                            <span class="member-id">202006773</span>
+                            <p class="member-role">Software Engineer</p>
+                            <div class="member-links">
+                                <a href="mailto:202006773@stu.uob.edu.bh" title="Email">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                        <polyline points="22,6 12,13 2,6"/>
+                                    </svg>
+                                </a>
+                                <a href="#" title="Download CV" class="cv-download" data-member="fatima">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                        <polyline points="7 10 12 15 17 10"/>
+                                        <line x1="12" y1="15" x2="12" y2="3"/>
+                                    </svg>
+                                </a>
                             </div>
-                            <span class="orbit-label">Cloud Sync</span>
                         </div>
                     </div>
                     
-                    <!-- Connection Lines -->
-                    <svg class="connection-lines" viewBox="0 0 400 400">
-                        <defs>
-                            <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stop-color="var(--accent-primary)" stop-opacity="0.5"/>
-                                <stop offset="100%" stop-color="var(--accent-secondary)" stop-opacity="0.5"/>
-                            </linearGradient>
-                        </defs>
-                        <path class="connection-path" d="M200 200 L100 100" stroke="url(#lineGradient)" stroke-width="2" stroke-dasharray="8 4"/>
-                        <path class="connection-path" d="M200 200 L300 100" stroke="url(#lineGradient)" stroke-width="2" stroke-dasharray="8 4"/>
-                        <path class="connection-path" d="M200 200 L200 320" stroke="url(#lineGradient)" stroke-width="2" stroke-dasharray="8 4"/>
-                    </svg>
+                    <!-- Team Member 4 - Ahmed -->
+                    <div class="team-card">
+                        <div class="photo-placeholder">
+                            <img src="photos/ahmed.jpg" alt="Ahmed Raed Alwadyani">
+                        </div>
+                        <div class="member-info">
+                            <h3 class="member-name">Ahmed Raed Alwadyani</h3>
+                            <span class="member-id">20197363</span>
+                            <p class="member-role">Software Engineer</p>
+                            <div class="member-links">
+                                <a href="mailto:20197363@stu.uob.edu.bh" title="Email">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                        <polyline points="22,6 12,13 2,6"/>
+                                    </svg>
+                                </a>
+                                <a href="#" title="Download CV" class="cv-download" data-member="ahmed">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                        <polyline points="7 10 12 15 17 10"/>
+                                        <line x1="12" y1="15" x2="12" y2="3"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </section>
         </div>
         <div class="hero-scroll">
             <a href="#vision" class="scroll-indicator">
@@ -596,151 +613,178 @@
         </div>
     </section>
 
-    <!-- Technology Section -->
+    <!-- Technology Section - App Showcase -->
     <section class="technology" id="technology">
         <div class="section-container">
             <div class="section-header">
-                <span class="section-tag">Technology</span>
-                <h2 class="section-title">Built on <span class="gradient-text">Cutting-Edge</span> Infrastructure</h2>
-                <p class="section-desc">Enterprise-grade technology stack ensuring reliability, security, and scalability</p>
+                <span class="section-tag">App Preview</span>
+                <h2 class="section-title">Experience the <span class="gradient-text">Wessal Edu App</span></h2>
+                <p class="section-desc">Click on any user type to explore the full app experience</p>
             </div>
             
-            <div class="tech-architecture">
-                <div class="tech-stack">
-                    <div class="tech-category">
-                        <h4>IoT Layer</h4>
-                        <div class="tech-items">
-                            <div class="tech-item">
-                                <span class="tech-icon">📡</span>
-                                <span>NFC Technology</span>
-                            </div>
-                            <div class="tech-item">
-                                <span class="tech-icon">⌚</span>
-                                <span>Smart Bracelet</span>
-                            </div>
-                            <div class="tech-item">
-                                <span class="tech-icon">📱</span>
-                                <span>Reader Devices</span>
-                            </div>
+            <div class="tech-stack">
+                <div class="tech-category">
+                    <h4>IoT Layer</h4>
+                    <div class="tech-items">
+                        <div class="tech-item">
+                            <span class="tech-icon">📡</span>
+                            <span>NFC Technology</span>
                         </div>
-                    </div>
-                    
-                    <div class="tech-category">
-                        <h4>AI & Analytics</h4>
-                        <div class="tech-items">
-                            <div class="tech-item">
-                                <span class="tech-icon">🤖</span>
-                                <span>Machine Learning</span>
-                            </div>
-                            <div class="tech-item">
-                                <span class="tech-icon">👁️</span>
-                                <span>Facial Recognition</span>
-                            </div>
-                            <div class="tech-item">
-                                <span class="tech-icon">📊</span>
-                                <span>Data Analysis</span>
-                            </div>
+                        <div class="tech-item">
+                            <span class="tech-icon">⌚</span>
+                            <span>Smart Bracelet</span>
                         </div>
-                    </div>
-                    
-                    <div class="tech-category">
-                        <h4>Cloud Infrastructure</h4>
-                        <div class="tech-items">
-                            <div class="tech-item">
-                                <span class="tech-icon">🔥</span>
-                                <span>Firebase</span>
-                            </div>
-                            <div class="tech-item">
-                                <span class="tech-icon">☁️</span>
-                                <span>Cloud Functions</span>
-                            </div>
-                            <div class="tech-item">
-                                <span class="tech-icon">🔒</span>
-                                <span>Secure Backend</span>
-                            </div>
+                        <div class="tech-item">
+                            <span class="tech-icon">📱</span>
+                            <span>Reader Devices</span>
                         </div>
                     </div>
                 </div>
                 
-                <div class="system-components">
-                    <h4>System Components</h4>
-                    <div class="components-showcase">
-                        <!-- Mobile App Mockup -->
-                        <div class="component-card">
-                            <div class="phone-mockup">
-                                <div class="phone-frame">
-                                    <div class="phone-notch"></div>
-                                    <div class="phone-screen">
-                                        <div class="app-header">
-                                            <span class="app-logo">W</span>
-                                            <span>Wessal Edu</span>
-                                        </div>
-                                        <div class="app-content">
-                                            <div class="app-card">
-                                                <span class="card-icon">👤</span>
-                                                <div class="card-info">
-                                                    <span class="card-title">Ahmed Ali</span>
-                                                    <span class="card-subtitle">Grade 5 - Section A</span>
-                                                </div>
-                                            </div>
-                                            <div class="app-stats">
-                                                <div class="stat-box">
-                                                    <span class="stat-value">98%</span>
-                                                    <span class="stat-label">Attendance</span>
-                                                </div>
-                                                <div class="stat-box">
-                                                    <span class="stat-value">A</span>
-                                                    <span class="stat-label">Grade</span>
-                                                </div>
-                                            </div>
-                                            <div class="app-nav">
-                                                <span>🏠</span>
-                                                <span>📚</span>
-                                                <span>💬</span>
-                                                <span>⚙️</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="component-label">Mobile Application<br><small>iOS & Android</small></p>
+                <div class="tech-category">
+                    <h4>AI & Analytics</h4>
+                    <div class="tech-items">
+                        <div class="tech-item">
+                            <span class="tech-icon">🤖</span>
+                            <span>Machine Learning</span>
                         </div>
-                        
-                        <!-- Smart Bracelet Mockup -->
-                        <div class="component-card">
-                            <div class="bracelet-mockup-large">
-                                <div class="bracelet-frame">
-                                    <div class="bracelet-strap left"></div>
-                                    <div class="bracelet-body">
-                                        <div class="bracelet-display">
-                                            <span class="bracelet-time">08:15</span>
-                                            <span class="bracelet-status">✓ Present</span>
-                                        </div>
-                                    </div>
-                                    <div class="bracelet-strap right"></div>
-                                </div>
-                            </div>
-                            <p class="component-label">Smart Bracelet<br><small>NFC-Enabled</small></p>
+                        <div class="tech-item">
+                            <span class="tech-icon">👁️</span>
+                            <span>Facial Recognition</span>
                         </div>
-                        
-                        <!-- NFC Reader Mockup -->
-                        <div class="component-card">
-                            <div class="reader-mockup">
-                                <div class="reader-frame">
-                                    <div class="reader-screen">
-                                        <div class="reader-wave"></div>
-                                        <span class="reader-text">TAP TO SCAN</span>
-                                    </div>
-                                    <div class="reader-led"></div>
-                                </div>
-                            </div>
-                            <p class="component-label">NFC Reader<br><small>Classroom & Bus</small></p>
+                        <div class="tech-item">
+                            <span class="tech-icon">📊</span>
+                            <span>Data Analysis</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h4>Cloud Infrastructure</h4>
+                    <div class="tech-items">
+                        <div class="tech-item">
+                            <span class="tech-icon">🔥</span>
+                            <span>Firebase</span>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-icon">☁️</span>
+                            <span>Cloud Functions</span>
+                        </div>
+                        <div class="tech-item">
+                            <span class="tech-icon">🔒</span>
+                            <span>Secure Backend</span>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <!-- Architecture Diagram Hint -->
+            <!-- App Showcase with Phone Frames -->
+            <div class="app-showcase">
+                <h4>App Screenshots by User Type</h4>
+                <p class="app-showcase-subtitle">Click on any phone to view all screens for that user</p>
+                
+                <div class="phone-carousel">
+                    <!-- Student Phone -->
+                    <div class="phone-showcase-item" data-user="student">
+                        <div class="phone-frame-showcase">
+                            <div class="phone-notch-showcase"></div>
+                            <div class="phone-screen-showcase">
+                                <div class="screen-placeholder">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <path d="M12 14l9-5-9-5-9 5 9 5z"/>
+                                        <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
+                                    </svg>
+                                    <span>Add student screenshots</span>
+                                </div>
+                                <!-- Add your screenshot: <img src="screenshots/student/dashboard.png" alt="Student Dashboard"> -->
+                            </div>
+                        </div>
+                        <p class="phone-user-label">Student</p>
+                        <p class="phone-user-desc">Dashboard & Learning</p>
+                    </div>
+                    
+                    <!-- Parent Phone -->
+                    <div class="phone-showcase-item" data-user="parent">
+                        <div class="phone-frame-showcase">
+                            <div class="phone-notch-showcase"></div>
+                            <div class="phone-screen-showcase">
+                                <div class="screen-placeholder">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                                        <circle cx="9" cy="7" r="4"/>
+                                        <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+                                        <path d="M16 3.13a4 4 0 010 7.75"/>
+                                    </svg>
+                                    <span>Add parent screenshots</span>
+                                </div>
+                                <!-- Add your screenshot: <img src="screenshots/parent/dashboard.png" alt="Parent Dashboard"> -->
+                            </div>
+                        </div>
+                        <p class="phone-user-label">Parent</p>
+                        <p class="phone-user-desc">Monitor & Communicate</p>
+                    </div>
+                    
+                    <!-- Teacher Phone -->
+                    <div class="phone-showcase-item" data-user="teacher">
+                        <div class="phone-frame-showcase">
+                            <div class="phone-notch-showcase"></div>
+                            <div class="phone-screen-showcase">
+                                <div class="screen-placeholder">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <path d="M4 19.5A2.5 2.5 0 016.5 17H20"/>
+                                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>
+                                    </svg>
+                                    <span>Add teacher screenshots</span>
+                                </div>
+                                <!-- Add your screenshot: <img src="screenshots/teacher/dashboard.png" alt="Teacher Dashboard"> -->
+                            </div>
+                        </div>
+                        <p class="phone-user-label">Teacher</p>
+                        <p class="phone-user-desc">Manage & Grade</p>
+                    </div>
+                    
+                    <!-- Admin Phone -->
+                    <div class="phone-showcase-item" data-user="admin">
+                        <div class="phone-frame-showcase">
+                            <div class="phone-notch-showcase"></div>
+                            <div class="phone-screen-showcase">
+                                <div class="screen-placeholder">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                    </svg>
+                                    <span>Add admin screenshots</span>
+                                </div>
+                                <!-- Add your screenshot: <img src="screenshots/admin/dashboard.png" alt="Admin Dashboard"> -->
+                            </div>
+                        </div>
+                        <p class="phone-user-label">Admin</p>
+                        <p class="phone-user-desc">Oversee & Analyze</p>
+                    </div>
+                    
+                    <!-- Driver Phone -->
+                    <div class="phone-showcase-item" data-user="driver">
+                        <div class="phone-frame-showcase">
+                            <div class="phone-notch-showcase"></div>
+                            <div class="phone-screen-showcase">
+                                <div class="screen-placeholder">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <rect x="1" y="3" width="15" height="13" rx="2"/>
+                                        <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                                        <circle cx="5.5" cy="18.5" r="2.5"/>
+                                        <circle cx="18.5" cy="18.5" r="2.5"/>
+                                    </svg>
+                                    <span>Add driver screenshots</span>
+                                </div>
+                                <!-- Add your screenshot: <img src="screenshots/driver/dashboard.png" alt="Driver Dashboard"> -->
+                            </div>
+                        </div>
+                        <p class="phone-user-label">Driver</p>
+                        <p class="phone-user-desc">Routes & Safety</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Architecture Note -->
             <div class="architecture-note">
                 <div class="note-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -752,6 +796,36 @@
             </div>
         </div>
     </section>
+    
+    <!-- Fullscreen Gallery Modal -->
+    <div class="fullscreen-gallery" id="fullscreenGallery">
+        <button class="gallery-close" id="galleryClose">&times;</button>
+        <div class="gallery-content">
+            <button class="gallery-arrow gallery-prev" id="galleryPrev">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 18l-6-6 6-6"/>
+                </svg>
+            </button>
+            <div class="gallery-phone-container">
+                <div class="gallery-phone-frame">
+                    <div class="gallery-phone-notch"></div>
+                    <div class="gallery-phone-screen" id="galleryScreen">
+                        <!-- Screenshot will be displayed here -->
+                    </div>
+                </div>
+                <div class="gallery-info">
+                    <p class="gallery-user-type" id="galleryUserType">Student</p>
+                    <p class="gallery-screen-name" id="galleryScreenName">Dashboard</p>
+                    <p class="gallery-counter" id="galleryCounter">1 / 5</p>
+                </div>
+            </div>
+            <button class="gallery-arrow gallery-next" id="galleryNext">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 18l6-6-6-6"/>
+                </svg>
+            </button>
+        </div>
+    </div>
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
@@ -850,15 +924,8 @@
                 <div class="footer-brand">
                     <a href="#" class="footer-logo">
                         <div class="logo-icon">
-                            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
-                                <circle cx="12" cy="14" r="4" fill="currentColor"/>
-                                <circle cx="28" cy="14" r="4" fill="currentColor"/>
-                                <circle cx="20" cy="28" r="4" fill="currentColor"/>
-                                <path d="M12 14L20 28M28 14L20 28M12 14L28 14" stroke="currentColor" stroke-width="1.5"/>
-                            </svg>
+                            <img src="logo.png" alt="Wessal Edu Logo">
                         </div>
-                        <span>Wessal<span class="accent">Edu</span></span>
                     </a>
                     <p>Connecting Future Schools in Bahrain through intelligent technology and seamless communication.</p>
                 </div>
@@ -867,10 +934,10 @@
                     <div class="footer-col">
                         <h4>Quick Links</h4>
                         <ul>
-                            <li><a href="#vision">Our Vision</a></li>
+                            <li><a href="#team">Our Team</a></li>
+                            <li><a href="#vision">Vision</a></li>
                             <li><a href="#features">Features</a></li>
-                            <li><a href="#benefits">Benefits</a></li>
-                            <li><a href="#technology">Technology</a></li>
+                            <li><a href="#technology">App Preview</a></li>
                         </ul>
                     </div>
                     <div class="footer-col">
@@ -904,4 +971,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
