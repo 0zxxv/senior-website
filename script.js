@@ -36,44 +36,46 @@ const galleryCounter = document.getElementById('galleryCounter');
 // The structure is: userType -> array of { name, image } objects
 const appScreenshots = {
     student: [
-        { name: 'Dashboard', image: 'screenshots/student/dashboard.png' },
-        { name: 'Schedule', image: 'screenshots/student/schedule.png' },
-        { name: 'Grades', image: 'screenshots/student/grades.png' },
-        { name: 'Homework', image: 'screenshots/student/homework.png' },
-        { name: 'Games', image: 'screenshots/student/games.png' },
-        // Add more student screens as needed
+        { name: 'Dashboard', image: 'photos/student/WhatsApp Image 2026-01-13 at 1.09.35 AM.jpeg' },
+        { name: 'Dashboard 2', image: 'photos/student/WhatsApp Image 2026-01-13 at 1.09.36 AM.jpeg' },
+        { name: 'Notifications', image: 'photos/student/WhatsApp Image 2026-01-13 at 1.09.36 AM (1).jpeg' },
+        { name: 'Side Menu', image: 'photos/student/WhatsApp Image 2026-01-13 at 1.09.36 AM (2).jpeg' },
+        { name: 'Homework', image: 'photos/student/WhatsApp Image 2026-01-13 at 1.09.36 AM (3).jpeg' },
+        { name: 'Profile', image: 'photos/student/WhatsApp Image 2026-01-13 at 1.09.37 AM.jpeg' },
+        { name: 'Attendance', image: 'photos/student/WhatsApp Image 2026-01-13 at 1.09.37 AM (1).jpeg' },
+        { name: 'Academic Year', image: 'photos/student/WhatsApp Image 2026-01-13 at 1.09.37 AM (2).jpeg' },
+        { name: 'Game 1 - Math CHallenge', image: 'photos/student/WhatsApp Image 2026-01-13 at 1.09.37 AM (3).jpeg' },
+        { name: 'Game 2 - Card Match', image: 'photos/student/WhatsApp Image 2026-01-13 at 1.09.37 AM (4).jpeg' },
+        { name: 'Game 3 - Speed Tap', image: 'photos/student/WhatsApp Image 2026-01-13 at 1.09.38 AM.jpeg' },
+        { name: 'Game 4 - Color Match', image: 'photos/student/WhatsApp Image 2026-01-13 at 1.09.38 AM (1).jpeg' },
     ],
     parent: [
-        { name: 'Dashboard', image: 'screenshots/parent/dashboard.png' },
-        { name: 'Child Tracking', image: 'screenshots/parent/tracking.png' },
-        { name: 'Messages', image: 'screenshots/parent/messages.png' },
-        { name: 'Reports', image: 'screenshots/parent/reports.png' },
-        { name: 'Settings', image: 'screenshots/parent/settings.png' },
-        // Add more parent screens as needed
+        { name: 'Dashboard', image: 'photos/parent/WhatsApp Image 2026-01-13 at 1.22.27 AM.jpeg' },
+        { name: 'Students Functions', image: 'photos/parent/WhatsApp Image 2026-01-13 at 1.22.27 AM (1).jpeg' },
+        { name: 'Announcements', image: 'photos/parent/WhatsApp Image 2026-01-13 at 1.22.27 AM (2).jpeg' },
+        { name: 'Chat', image: 'photos/parent/WhatsApp Image 2026-01-13 at 1.22.28 AM.jpeg' },
+        { name: 'Chat 2', image: 'photos/parent/WhatsApp Image 2026-01-13 at 1.22.28 AM (1).jpeg' },
     ],
     teacher: [
-        { name: 'Dashboard', image: 'screenshots/teacher/dashboard.png' },
-        { name: 'Attendance', image: 'screenshots/teacher/attendance.png' },
-        { name: 'Grades Entry', image: 'screenshots/teacher/grades.png' },
-        { name: 'Class List', image: 'screenshots/teacher/classlist.png' },
-        { name: 'Announcements', image: 'screenshots/teacher/announcements.png' },
-        // Add more teacher screens as needed
+        { name: 'Dashboard', image: 'photos/teacher/WhatsApp Image 2026-01-13 at 1.19.47 AM.jpeg' },
+        { name: 'Dashboard 2', image: 'photos/teacher/WhatsApp Image 2026-01-13 at 1.19.47 AM (1).jpeg' },
+        { name: 'Notifications', image: 'photos/teacher/WhatsApp Image 2026-01-13 at 1.19.48 AM.jpeg' },
+        { name: 'Profile', image: 'photos/teacher/WhatsApp Image 2026-01-13 at 1.19.48 AM (1).jpeg' },
+        { name: 'Attendance', image: 'photos/teacher/WhatsApp Image 2026-01-13 at 1.19.48 AM (2).jpeg' },
+        { name: 'Manual Attendance', image: 'photos/teacher/WhatsApp Image 2026-01-13 at 1.19.48 AM (3).jpeg' },
+        { name: 'Bracelet Attendance', image: 'photos/teacher/WhatsApp Image 2026-01-13 at 1.19.49 AM.jpeg' },
+        { name: 'Camera AI Attendance', image: 'photos/teacher/WhatsApp Image 2026-01-13 at 1.19.49 AM (1).jpeg' },
+        { name: 'Chat', image: 'photos/teacher/WhatsApp Image 2026-01-13 at 1.19.49 AM (2).jpeg' },
+        { name: 'CHat 2', image: 'photos/teacher/WhatsApp Image 2026-01-13 at 1.19.49 AM (3).jpeg' },
+        { name: 'Teacher Attendance', image: 'photos/teacher/WhatsApp Image 2026-01-13 at 1.19.49 AM (4).jpeg' },
     ],
     admin: [
-        { name: 'Dashboard', image: 'screenshots/admin/dashboard.png' },
-        { name: 'Analytics', image: 'screenshots/admin/analytics.png' },
-        { name: 'User Management', image: 'screenshots/admin/users.png' },
-        { name: 'Reports', image: 'screenshots/admin/reports.png' },
-        { name: 'Settings', image: 'screenshots/admin/settings.png' },
-        // Add more admin screens as needed
+        { name: 'Dashboard', image: 'photos/admin/WhatsApp Image 2026-01-13 at 1.25.01 AM.jpeg' },
+        { name: 'Dashboard 2', image: 'photos/admin/WhatsApp Image 2026-01-13 at 1.25.03 AM.jpeg' },
     ],
     driver: [
-        { name: 'Dashboard', image: 'screenshots/driver/dashboard.png' },
-        { name: 'Route Map', image: 'screenshots/driver/route.png' },
-        { name: 'Student List', image: 'screenshots/driver/students.png' },
-        { name: 'Scan Students', image: 'screenshots/driver/scan.png' },
-        { name: 'Notifications', image: 'screenshots/driver/notifications.png' },
-        // Add more driver screens as needed
+        { name: 'Dashboard', image: 'photos/driver/WhatsApp Image 2026-01-13 at 1.26.37 AM.jpeg' },
+        { name: 'Attendance', image: 'photos/driver/WhatsApp Image 2026-01-13 at 1.26.38 AM.jpeg' },
     ]
 };
 
