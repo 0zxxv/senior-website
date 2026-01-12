@@ -414,36 +414,36 @@ function initContactForm() {
         const formData = new FormData(contactForm);
         const data = Object.fromEntries(formData.entries());
         
-        // Simulate form submission (replace with actual API call)
+        // Add FormSubmit configuration
+        formData.append('_to', 'wessaleducation@gmail.com');
+        formData.append('_subject', 'Demo Request - Wessal Edu');
+        formData.append('_captcha', 'false');
+        formData.append('_template', 'table');
+        
         try {
-            await simulateFormSubmission(data);
+            // Submit to FormSubmit AJAX endpoint
+            const response = await fetch('https://formsubmit.co/ajax/wessaleducation@gmail.com', {
+                method: 'POST',
+                body: formData
+            });
             
-            // Show success message
-            showNotification('Thank you! Your message has been sent successfully.', 'success');
-            contactForm.reset();
+            const result = await response.json();
+            
+            if (response.ok && result.success) {
+                // Show success message
+                showNotification('Thank you! Your demo request has been sent successfully.', 'success');
+                contactForm.reset();
+            } else {
+                throw new Error('Form submission failed');
+            }
         } catch (error) {
-            // Show error message
-            showNotification('Oops! Something went wrong. Please try again.', 'error');
+            console.error('Form submission error:', error);
+            showNotification('Oops! Something went wrong. Please try again or contact us directly.', 'error');
         } finally {
             // Restore button
             submitBtn.disabled = false;
             submitBtn.innerHTML = originalBtnText;
         }
-    });
-}
-
-// Simulate form submission (demo purposes)
-function simulateFormSubmission(data) {
-    return new Promise((resolve, reject) => {
-        console.log('Form data submitted:', data);
-        setTimeout(() => {
-            // Simulate 90% success rate
-            if (Math.random() > 0.1) {
-                resolve({ success: true });
-            } else {
-                reject(new Error('Network error'));
-            }
-        }, 1500);
     });
 }
 
